@@ -2,16 +2,32 @@
 
 ## _(draft)_
 
-## Why enforce inline documentation
+## Why inline documentation
 
-- The true meaning of inline documentation: Ambiguous or convoluted code is just bad code, don't hide it behind documentation. Meaningul documentation should not be used to explain good code, but rather explain good code.
-- "self-documentation" is not a valid argument.
-- Imagine your code 6 months from now. Will you remember every single reasoning behind every detail?
-- When is it NOT good to have documentation or what is too much documentation
+Meaningful documentation should not be used to explain bad code, but rather to explain good code.
 
-## When to inline document (tentative)
+_"Self-documentation"_ is not a valid argument.
 
-Explain hard and soft approach. How much value does each one give to the overal result?
+Imagine visiting your code 6 months from now. Will you remember every reasoning behind every decision?
+
+**Pain Points**
+
+- More code to maintain \*\*\*
+- Verbosity
+- Delays a task \*\*\*
+- Redundancy
+- visually unappealing
+
+**Selling Points**
+
+- Helps scale the organization
+- Helps you understand your own code better
+- Less tech debt
+- Speeds up onboarding
+
+## When to inline document
+
+In an ideal world, we would want to document anything and everything, but in the real world,we should always try to shoot for the most cost-effective scenario. By giving a measurable value to each piece of code, perhaps we can find a good compromise. For ex:
 
 | Value | Significance |
 | ----- | ------------ |
@@ -23,23 +39,36 @@ Explain hard and soft approach. How much value does each one give to the overal 
 - Modules - 2
 - Components - 2
 - Classes - 2
-- TFile headers (?) - 1
-- Closures - 2
-- Services (?) - 2
+- File headers - 1
+- Closures - 1
+- Services - 2
 - Business logic that doesn't translate well - 1
 
-## Metrics (the soft approach)
+## A soft approach
 
-In the case that a file has zero documentation in it, for the sake of moving on quickly, you could use the following metrics to enforce some basic documentation.
+In the case that we just want a bare minimum of documentation, we could follow certain metrics to go by when developing or when reviewing someone else's code.
+
+- What is the bare minimum to you ?
+- Person doing the task as well as person reviewing the pr with the task ?
 
 1. Module has more than X lines of code
 2. Component has no documentation in its file header
 3. Have to read over a piece of logic thrice to understand what it does
+4. You're staring at a piece of logic for more than 5 minutes.
+
+## Templates
+
+Will provide templates that can be easily copy-pasted for use.
+
+## Measurable metrics on how documentation helps improve the development process (tentative section)
+
+- Onboarding speed (huge variable)
+- WTFs per minute
 
 ## FAQ
 
-- ??
+-
 
 ## Resources
 
-[js-inline-documentation-standards](https://make.wordpress.org/core/handbook/best-practices/inline-documentation-standards/javascript/)
+[js-inline-documentation-standards based on JSDocs](https://make.wordpress.org/core/handbook/best-practices/inline-documentation-standards/javascript/)
